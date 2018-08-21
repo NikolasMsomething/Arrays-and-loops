@@ -48,17 +48,58 @@ function hazardWarningCreator (typeOfWarning) {
         } else if (warningCounter === 0 || warningCounter >= 2) {
             console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} times today!`)
         }
-        
+
     }
 }
 
 const rocksWarning = hazardWarningCreator("Rocks on the road");
-rocksWarning("Dog");
+//rocksWarning("Dog");
 
 const hailStormWarning = hazardWarningCreator("Hail");
-hailStormWarning("Zimbabwe");
+//hailStormWarning("Zimbabwe");
 
 const armageddonWarning = hazardWarningCreator("End of World");
-armageddonWarning("Earth");
-armageddonWarning("Earth");
-armageddonWarning("Earth");
+//armageddonWarning("Earth");
+//armageddonWarning("Earth");
+//armageddonWarning("Earth");
+
+
+function turtle(steps) {
+
+    let newSteps = steps.filter(item => item[0] >= 0 && item[1] >= 0);
+    const newArr = newSteps.map(steps => steps[0] + steps[1]);
+    newArr.forEach(item => console.log(item));
+
+  }
+
+
+const steps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+turtle(steps);
+
+
+// function crackingTheCodeReduce(message) {
+//   const word = message.split('');
+
+//   const arr = [];
+
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === 'a') {
+//       arr.push(word[1]);
+//     }
+//     if (word[i] === 'b') {
+//       arr.push(word[2]);
+//     }
+//     if (word[i] === 'c') {
+//       arr.push(word[3]);
+//     }
+//     if (word[i] === 'd') {
+//       arr.push(word[4]);
+//     }
+//     else arr.push(' ');
+
+//   }
+//   return arr.join('');
+// }
+
+// //console.log(crackingTheCodeReduce('craft block argon meter bells brown croon droop'));
+
