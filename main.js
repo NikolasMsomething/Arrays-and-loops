@@ -58,48 +58,75 @@ function shortWords(array) {
   return newArr;
 }
 
-function max(numbers) {
-    let currentMax = numbers[0]
-    numbers.forEach((num, index) => {
-      if(index !== 0 && num > currentMax) {
-        currentMax = num;
-      }
-    });
-    return currentMax;
-  }
-  
-function min(numbers) {
-    let currentMin = numbers[0]
-    numbers.forEach((num, index) => {
-      if(index !== 0 && num < currentMin) {
-        currentMin = num;
-      }
-    });
-    return currentMin;
-  }
+// function max(numbers) {
+//   let currentMax = numbers[0];
+//   numbers.forEach((num, index) => {
+//     if(index !== 0 && num > currentMax) {
+//       currentMax = num;
+//     }
+//   });
+//   return currentMax;
+// }
 
-  function average(numbers) {
-    let firstNum = numbers[0];
-    let dog = numbers.forEach((num, index) => {
-      if(index !== 0) {
-        firstNum += num
-      }
-    });
-    return firstNum/numbers.length
-  }
+// function min(numbers) {
+//   let currentMin = numbers[0];
+//   numbers.forEach((num, index) => {
+//     if(index !== 0 && num < currentMin) {
+//       currentMin = num;
+//     }
+//   });
+//   return currentMin;
+// }
 
-  function fizzBuzz(countTo) {
-    let newAr = [];
-    for(let i = 1; i < countTo; i++) {
-      if(i % 5 === 0 && i % 3 === 0) {
-        newAr.push("fizzbuzz")
-      } else if (i % 3 === 0) {
-        newAr.push("fizz");
-      } else if (i % 5 === 0) {
-        newAr.push("buzz");
-      } else {
-        newAr.push(i);
-      }
+function average(numbers) {
+  let firstNum = numbers[0];
+  let dog = numbers.forEach((num, index) => {
+    if(index !== 0) {
+      firstNum += num;
     }
-        return newAr;
+  });
+  return firstNum/numbers.length;
+}
+
+function fizzBuzz(countTo) {
+  let newAr = [];
+  for(let i = 1; i < countTo; i++) {
+    if(i % 5 === 0 && i % 3 === 0) {
+      newAr.push('fizzbuzz');
+    } else if (i % 3 === 0) {
+      newAr.push('fizz');
+    } else if (i % 5 === 0) {
+      newAr.push('buzz');
+    } else {
+      newAr.push(i);
+    }
   }
+  return newAr;
+}
+
+
+
+function max(numbers) {
+  let currentMax = numbers[0];
+  var i = numbers[0];
+  while(i < numbers.length) {
+    if(currentMax < numbers[i]) {
+      currentMax = numbers[i];
+    }
+    i++;
+  }
+  return currentMax;
+}
+
+console.log(max([-5, 28, 98, -20013, 0.7878, 22, 115]));
+
+// function min(numbers) {
+//   let currentMin = numbers[0];
+//   numbers.forEach((num, index) => {
+//     if(index !== 0 && num < currentMin) {
+//       currentMin = num;
+//     }
+//   });
+//   return currentMin;
+// }
+
