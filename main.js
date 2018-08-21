@@ -104,8 +104,6 @@ function fizzBuzz(countTo) {
   return newAr;
 }
 
-
-
 function max(numbers) {
   let currentMax = numbers[0];
   var i = numbers[0];
@@ -118,15 +116,15 @@ function max(numbers) {
   return currentMax;
 }
 
-console.log(max([-5, 28, 98, -20013, 0.7878, 22, 115]));
 
-// function min(numbers) {
-//   let currentMin = numbers[0];
-//   numbers.forEach((num, index) => {
-//     if(index !== 0 && num < currentMin) {
-//       currentMin = num;
-//     }
-//   });
-//   return currentMin;
-// }
+
+function min(numbers) {
+  let currentMin = numbers[0];
+  numbers.forEach((num, index) => {
+    if(index !== 0 && num < currentMin) {
+      currentMin = num;
+    }
+  });
+  return currentMin;
+}
 
