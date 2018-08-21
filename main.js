@@ -48,4 +48,12 @@ function squares(array) {
   return newArr;
 }
 
+function greatestToLeast(array) {
+  let newArr = array.sort((a, b) => b - a);
+  return newArr;
+}
 
+function shortWords(array) {
+  let newArr = array.filter(item => item.length < 5);
+  return newArr;
+}
