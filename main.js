@@ -57,3 +57,49 @@ function shortWords(array) {
   let newArr = array.filter(item => item.length < 5);
   return newArr;
 }
+
+function max(numbers) {
+    let currentMax = numbers[0]
+    numbers.forEach((num, index) => {
+      if(index !== 0 && num > currentMax) {
+        currentMax = num;
+      }
+    });
+    return currentMax;
+  }
+  
+function min(numbers) {
+    let currentMin = numbers[0]
+    numbers.forEach((num, index) => {
+      if(index !== 0 && num < currentMin) {
+        currentMin = num;
+      }
+    });
+    return currentMin;
+  }
+
+  function average(numbers) {
+    let firstNum = numbers[0];
+    let dog = numbers.forEach((num, index) => {
+      if(index !== 0) {
+        firstNum += num
+      }
+    });
+    return firstNum/numbers.length
+  }
+
+  function fizzBuzz(countTo) {
+    let newAr = [];
+    for(let i = 1; i < countTo; i++) {
+      if(i % 5 === 0 && i % 3 === 0) {
+        newAr.push("fizzbuzz")
+      } else if (i % 3 === 0) {
+        newAr.push("fizz");
+      } else if (i % 5 === 0) {
+        newAr.push("buzz");
+      } else {
+        newAr.push(i);
+      }
+    }
+        return newAr;
+  }
