@@ -117,14 +117,3 @@ function max(numbers) {
 }
 
 
-
-function min(numbers) {
-  let currentMin = numbers[0];
-  numbers.forEach((num, index) => {
-    if(index !== 0 && num < currentMin) {
-      currentMin = num;
-    }
-  });
-  return currentMin;
-}
-
