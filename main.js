@@ -1,27 +1,59 @@
+'use strict';
+
 function makeList(item1, item2, item3) {
-    let newAr = [];
-    newAr.push(item1, item2, item3)
-    return newAr;
-  }
+  let newAr = [];
+  newAr.push(item1, item2, item3);
+  return newAr;
+}
 
 function addToList(list, item) {
-    let newAr = list;
-    newAr.push(item);
-    return newAr;
-  }
+  let newAr = list;
+  newAr.push(item);
+  return newAr;
+}
 
 function accessFirstItem(array) {
-    return array[0];
-  }
-  
+  return array[0];
+}
+
 function accessThirdItem(array) {
-    return array[2];
-  }
+  return array[2];
+}
 
 function findLength(array) {
-    return array.length;
-  }
-  
+  return array.length;
+}
+
 function accessLastItem(array) {
-    return array[array.length - 1];
-  }
+  return array[array.length - 1];
+}
+
+function minusLastItem(array) {
+  let sliced = array.slice(0, array.length - 1);
+  return sliced;
+}
+
+function lastThreeItems(array) {
+  let sliced = array.slice(array.length -3, array.length);
+  return sliced;
+}
+
+function copyFirstHalf(array) {
+  let sliced = array.slice(0, Math.floor(array.length /2));
+  return sliced;
+}
+
+function squares(array) {
+  let newArr = array.map(item => item * item);
+  return newArr;
+}
+
+function greatestToLeast(array) {
+  let newArr = array.sort((a, b) => b - a);
+  return newArr;
+}
+
+function shortWords(array) {
+  let newArr = array.filter(item => item.length < 5);
+  return newArr;
+}
