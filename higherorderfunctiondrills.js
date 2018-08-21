@@ -36,3 +36,29 @@ function filter(arr, fn) {
 // }
 
 // filter(["dog", "poop", "zoop", "sdlfldsflad"], elementLengthGreaterThan3);
+
+
+function hazardWarningCreator (typeOfWarning) {
+    let warningCounter = 0;
+    return function(location) {
+        ++warningCounter
+        console.log(`There is a ${typeOfWarning} hazard at ${location}!`);
+        if(warningCounter === 1) {
+            console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time today!`);
+        } else if (warningCounter === 0 || warningCounter >= 2) {
+            console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} times today!`)
+        }
+        
+    }
+}
+
+const rocksWarning = hazardWarningCreator("Rocks on the road");
+rocksWarning("Dog");
+
+const hailStormWarning = hazardWarningCreator("Hail");
+hailStormWarning("Zimbabwe");
+
+const armageddonWarning = hazardWarningCreator("End of World");
+armageddonWarning("Earth");
+armageddonWarning("Earth");
+armageddonWarning("Earth");
