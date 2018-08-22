@@ -77,29 +77,17 @@ const steps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 turtle(steps);
 
 
-// function crackingTheCodeReduce(message) {
-//   const word = message.split('');
+function crackingTheCodeReduce(message) {
+  const word = message.split('');
+  let dog = word.reduce((accumulator, element) => {
+    if(element.length === 3) {
+      accumulator += " ";
+    } else {
+      accumulator += element[element.length - 1].toUpperCase();
+    }
+   })
+  console.log(dog);
+ }
+//console.log(crackingTheCodeReduce('craft block argon meter bells brown croon droop'));
 
-//   const arr = [];
-
-//   for (let i = 0; i < word.length; i++) {
-//     if (word[i] === 'a') {
-//       arr.push(word[1]);
-//     }
-//     if (word[i] === 'b') {
-//       arr.push(word[2]);
-//     }
-//     if (word[i] === 'c') {
-//       arr.push(word[3]);
-//     }
-//     if (word[i] === 'd') {
-//       arr.push(word[4]);
-//     }
-//     else arr.push(' ');
-
-//   }
-//   return arr.join('');
-// }
-
-// //console.log(crackingTheCodeReduce('craft block argon meter bells brown croon droop'));
-
+crackingTheCodeReduce('noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest')
